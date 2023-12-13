@@ -14,7 +14,7 @@ public class Row {
     }
 
     public void findValid() {
-        findValid(new RowConfig(0, 0, 0, false, ""));
+        findValid(new RowConfig(0, 0, 0, false));
     }
 
     private void findValid(RowConfig config) {
