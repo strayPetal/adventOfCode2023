@@ -5,6 +5,10 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "day12", "day12\day12.csproj", "{021075DD-3AA8-4DBE-91FF-D187B9CC0A8F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "day14-parabolic-reflector-dish", "day14-parabolic-reflector-dish", "{0528528A-778B-4079-806E-868A9FAFA4E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "part1", "day14-parabolic-reflector-dish\part1\part1.csproj", "{053DC1CD-644D-41FA-97AB-12E771072D22}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,11 +19,18 @@ Global
 		{021075DD-3AA8-4DBE-91FF-D187B9CC0A8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{021075DD-3AA8-4DBE-91FF-D187B9CC0A8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{021075DD-3AA8-4DBE-91FF-D187B9CC0A8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{053DC1CD-644D-41FA-97AB-12E771072D22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{053DC1CD-644D-41FA-97AB-12E771072D22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{053DC1CD-644D-41FA-97AB-12E771072D22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{053DC1CD-644D-41FA-97AB-12E771072D22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {71B0A018-26DE-48EA-B181-2119F6652F4C}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{053DC1CD-644D-41FA-97AB-12E771072D22} = {0528528A-778B-4079-806E-868A9FAFA4E7}
 	EndGlobalSection
 EndGlobal

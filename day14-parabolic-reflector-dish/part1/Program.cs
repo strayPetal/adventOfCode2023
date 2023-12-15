@@ -7,7 +7,7 @@ using System.IO;
 using System.Linq;
 
 class Program {
-    const string PUZZLE_INPUT_FILE = "input.txt";
+    const string PUZZLE_INPUT_FILE = "../input.txt";
     
     const char EMPTY_SPACE = '.';
     const char ROUNDED_ROCK = 'O';
