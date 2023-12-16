@@ -1,4 +1,6 @@
-﻿class Program {
+﻿using System.Security.Cryptography;
+
+class Program {
     const string PUZZLE_INPUT_FILE = "../puzzleInput.txt";
 
     static void Main(string[] args) {
