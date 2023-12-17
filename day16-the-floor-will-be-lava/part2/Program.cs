@@ -9,8 +9,25 @@
 
     static Spot[,] Grid = new Spot[1, 1];
     static int EnergizedCount = 0;
+    static int HighestEnergizedCount = 0;
 
     static void Main() {
+        initializeGrid();
+
+        for (int x = 0; x < Grid.GetLength(0); x++) {
+            testFor(x, 0, 0, 1);
+            testFor(x, Grid.GetLength(1) - 1, 0, -1);
+        }
+
+        for (int y = 0; y < Grid.GetLength(0); y++) {
+            testFor(0, y, 1, 0);
+            testFor(Grid.GetLength(0) - 1, y, -1, 0);
+        }        
+
+        Console.WriteLine($"Best number of energized spots is: {HighestEnergizedCount}");
+    }
+
+    static void initializeGrid() {
         var rawGrid = File.ReadLines(PUZZLE_INPUT_FILE);
         
         int xLength = rawGrid.First().Length;
@@ -24,10 +41,26 @@
                 Grid[x, y] = new Spot(type);
             }
         }
+    }
 
-        processCurrentSpot(0, 0, 1, 0);
+    static void reset() {
+        for (int y = 0; y < Grid.GetLength(0); y++) {
+            for (int x = 0; x < Grid.GetLength(0); x++) {
+                Spot spot = Grid[x, y];
+                spot.reset();
+            }
+        }
 
-        Console.WriteLine($"The number of energized spots is: {EnergizedCount}");
+        EnergizedCount = 0;
+    }
+
+    static void testFor(int beamX, int beamY, int moveX, int moveY) {
+        processCurrentSpot(beamX, beamY, moveX, moveY);
+
+        if (EnergizedCount > HighestEnergizedCount)
+            HighestEnergizedCount = EnergizedCount;
+        
+        reset();
     }
 
     static void move(int beamX, int beamY, int moveX, int moveY) {
